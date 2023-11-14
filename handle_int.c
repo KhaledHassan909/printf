@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * handle_int - Handles an integer value.
- * @value: The integer value to be handled.
+ * handle_int - a function that writes the str of an int to stdout.
+ * @value: The integer to be converted and written.
  */
 void handle_int(int value)
 {
 	char *num = _itoa(value); /* Converting int to str */
+
 	write(1, num, _strlen(num));
 	free(num);
 }
