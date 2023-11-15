@@ -8,7 +8,10 @@
 void handle_str(va_list args)
 {
 	char *value;
-
+	
 	value = va_arg(args, char *);
-	write(1, value, _strlen(value));
+	if(value == NULL)
+	      write(1, "(null)", 6);
+	else
+	      write(1, value, _strlen(value));
 }
