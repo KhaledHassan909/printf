@@ -25,6 +25,9 @@ int _printf(const char *format, ...)
 		else
 		{
 			ptr++;
+
+			if (*ptr == '\0')
+			        break;
 			if (*ptr == 'c')
 			{
 				handle_char(args);
