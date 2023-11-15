@@ -7,11 +7,7 @@
  */
 void handle_char(va_list args)
 {
-    char value = va_arg(args, int);
-    char str[2];
+	char value = va_arg(args, int);
 
-    str[0] = value;
-    str[1] = '\0';
-
-    write(1, str, 1);
+	write(1, &value, 1);
 }
