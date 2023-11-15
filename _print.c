@@ -31,6 +31,7 @@ int _printf(const char *format, ...)
 			if (*ptr == 'c')
 			{
 				handle_char(args);
+				len++;
 			}
 			else if (*ptr == 's')
 			{
