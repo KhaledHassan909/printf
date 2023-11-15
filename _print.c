@@ -55,7 +55,7 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
-	while (*ptr)
+	while (*ptr != '\0')
 	{
 		if (*ptr != '%')
 		{
