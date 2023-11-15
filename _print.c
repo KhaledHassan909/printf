@@ -8,7 +8,6 @@
  */
 void handle_format(const char *ptr, va_list args, unsigned int *len)
 {
-	int str_len = 0;
 
 	if (*ptr == 'c')
 	{
@@ -17,12 +16,8 @@ void handle_format(const char *ptr, va_list args, unsigned int *len)
 	}
 	else if (*ptr == 's')
 	{
-		while (ptr[str_len] != '\0')
-		{
-			str_len++;
-		}
 		handle_str(args);
-		*len += str_len;
+		*len += _strlen(va_arg(args, char *));
 	}
 	else if (*ptr == '%')
 	{

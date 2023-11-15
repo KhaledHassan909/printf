@@ -8,8 +8,10 @@
  */
 int _strlen(char *str)
 {
-	unsigned int len = 0;
+        unsigned int len = 0;
 	char *ptr = str;
+        if (str == NULL)
+             return 0;
 
 	while (*ptr != '\0')
 	{
